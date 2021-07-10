@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+  </head>
+  <body>
+
+    <section class= "row">
+      <header class="border-bottom">
+        <div class="d-flex justify-content-between">
+          <div class="col-2 user-name">
+            <div class="text-center">
+             <%= link_to current_user.name, edit_user_path(current_user), class:'link-btn-user'%>
+            </div>
+          </div>
+          <div class="col-10 bg-secondary">
+              <div class="float-start ">
+               <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:'link-btn' %>
+              </div>
+
+              <div class="float-end">
+              </div>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <div class="bottom-content">
+      <div class="channel-box col-2">
+        <div class= "channel-list" >
+          <div class="channel-list-name col-12">
+            <%= link_to "チャンネルを作成する", new_channel_path, class:'new-channel col-12' %>
+          </div>
+          <div class="channel-table">
+            <div class="channel-names">
+              <% current_user.channels.each do |channel| %>
+                  <%= link_to channel.channel_name,channel_works_path(channel) , class:'list-group-item col-11' %>
+              <% end %>
+            </div>
+          </div>
+          <div class="channel-delete col-12">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

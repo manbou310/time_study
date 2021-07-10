@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+
+    <script type="text/javascript" language="javascript">
+
+
+    function onButtonClickBefore() {
+    let now = new Date();
+    let Hour = now.getHours();
+    let Min = now.getMinutes();
+    let Sec = now.getSeconds();
+    let now_time = Hour + ":" + Min + ":" + Sec;
+
+      document.forms.id_form1.id_textBox1.value = now_time;
+    }
+
+
+    function onButtonClickAfter() {
+    let now = new Date();
+    let Hour = now.getHours();
+    let Min = now.getMinutes();
+    let Sec = now.getSeconds();
+    let now_time = Hour + ":" + Min + ":" + Sec;
+
+      document.forms.id_form2.id_textBox2.value = now_time;
+    }
+
+    </script>
+
+
+  </head>
+  <body>
+   
+   <%= form_with model: [@channel, @work], local: true do |f| %>
+   <%= render 'shared/error_messages', model: f.object %>
+    <div class="parent">
+      <div class="row mt-3">
+        <div class="border-bottom pb-3">
+          <div class="d-flex justify-content-around">
+            <div class="col-3">
+              <%= f.date_field :date ,class: 'form-control' ,placeholder:"日付" %>
+            </div>
+            <div class="col-4">
+              <%= f.text_field :process_name, class: 'form-control',placeholder:"工程名" %>
+            </div>
+            <div class="text-right">
+              <%= link_to '戻る', root_path ,class:'link-btn'%>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="add_from">
+          <%= link_to_add_association "フォームを追加", f, :time_studies,
+            class: "btn btn-outline-secondary mr-3",
+            id: 'add-btn',
+            data: {
+              association_insertion_node: '#detail-association-insertion-point',
+              association_insertion_method: 'after'
+              }
+          %>
+      </div>
+
+        <%= f.fields_for :time_studies do |form| %>
+            <%= render "time_study_fields", f: form %>
+        <% end %>
+
+      <div class="d-flex align-items-center">
+        <%= f.submit "保存する" ,class:"btn btn-secondary"%>
+      </div>
+    </div>
+    
+   <% end %> 
+
+  </body>
+</html>
+
+

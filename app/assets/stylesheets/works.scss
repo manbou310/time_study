@@ -1,0 +1,203 @@
+// Place all the styles related to the works controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ユーザー名 */
+.user-name{
+  height: 80px;
+  padding: 0 20px;
+  background-color: #535353;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* 右上リンクボタン */
+.link-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #FFF;
+  background: #b6b6b6;
+  border-bottom: solid 2px #7a7a7a;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 3px;
+}
+
+.link-btn:active {
+  border-bottom: solid 4px #5f5f5f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.30);
+  text-decoration: none;
+}
+
+.link-btn:hover{
+  color:black;
+}
+
+
+.link-btn-new {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  color: #FFF;
+  background: #b6b6b6;
+  border-bottom: solid 2px #7a7a7a;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 15px 10px 0px;
+}
+
+.link-btn-new:active {
+  color: #FFF;
+  border-bottom: solid 4px  #5f5f5f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.30);
+}
+
+.link-btn-new:hover{
+  color:black;
+}
+
+.link-btn-user {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  color: #FFF;
+  background: #b6b6b6;
+  border-bottom: solid 2px #7a7a7a;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 15px 10px 0px;
+}
+
+.link-btn-user:active {
+  border-bottom: solid 4px #5f5f5f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.30);
+  text-decoration: none;
+}
+
+.link-btn-user:hover{
+  color:black;
+}
+
+.bg-secondary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 左下 チャンネルリスト */
+
+
+.list-group-item {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #757575;
+  background: #d6d6d6;
+  transition: .4s;
+  font-size: 18px;
+  font-family: Century;
+  height: 50px;
+  margin: 10px;
+  text-align: center;
+}
+
+.list-group-item:hover {
+  background: #a0a0a0;
+  color: white;
+  text-decoration: none;
+}
+
+.channel-box{
+  background-color: #f0f0f0;
+  text-align: center;
+  height: calc(100vh - 50px - 30px);
+}
+
+.channel-list-name{
+  color: #313131;
+  background: #d6d6d6;
+  font-size: 17px;
+  font-family: Century;
+  text-align: left;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-channel{
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #757575;
+  background: #d6d6d6;
+
+  font-size: 18px;
+  font-family: Century;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-channel:hover {
+  background: #353535;
+  color: white;
+}
+
+.index-box{
+  height: calc(100vh - 50px - 30px);
+}
+
+.bottom-content{
+  display: flex;
+
+}
+
+.index-box-image{
+  height: calc(100vh - 50px - 30px);
+  background-image: url("factory.png");
+  background-size: cover;
+}
+
+
+.channel-list-delete{
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #757575;
+  background: #d6d6d6;
+
+  font-size: 18px;
+  font-family: Century;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.channel-list-delete:hover {
+  background: #b43232;
+  color: white;
+}
+
+.channel-delete{
+  display: block;
+  align-content: flex-end;
+}

@@ -1,0 +1,41 @@
+
+<div class="nested-fields">
+ <table>
+   
+    <tr>
+      <div class="d-flex justify-content-around my-3 mx-3">
+        <div class= col-2.5>
+          <%= f.text_field :production_name ,class:"form-control form-control-lg" ,placeholder:"製品名" %>
+        </div>
+        
+        <div class= col-2.5>
+          <%= f.text_field :serial_number ,class:"form-control form-control-lg" ,placeholder:"製造番号" %>
+        </div>
+        
+        <div class= col-0.5>
+          <form name="form1" id="id_form1" action="">
+            <%= f.text_field :start_time ,class:"form-control form-control-lg" ,name:"textBox1" ,id:"id_textBox1" ,placeholder:"開始時間" ,value:"" %>
+            <input type="button" value="開始時刻" onclick="onButtonClickBefore();" />
+          </form>
+        </div>
+
+        <div class= col-0.5>
+          <form name="form2" id="id_form2" action="">
+            <%= f.text_field :ending_time ,class:"form-control form-control-lg" ,name:"textBox2" ,id:"id_textBox2" ,placeholder:"終了時間" ,value:"" %> 
+            <input type="button" value="終了時刻" onclick="onButtonClickAfter();" />
+          </form>
+        </div>
+
+        <div class= check-box>
+          <p class="text-end">不具合：</p>
+          <%= f.check_box :problem ,{}, "true", "false" %>
+          <p class="text-end">忘れ：</p>
+          <%= f.check_box :forgetting ,{}, "true", "false" %>
+        </div>
+
+          <!-- 削除ボタン -->
+          <%= link_to_remove_association "削除", f %>
+      </div>
+    </tr>
+  </table>
+</div>
