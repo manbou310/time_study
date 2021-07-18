@@ -1,10 +1,10 @@
-class CreateTimeStudies < ActiveRecord::Migration[6.0]
+class CreateAddForms < ActiveRecord::Migration[6.0]
   def change
-    create_table :time_studies do |t|
+    create_table :add_forms do |t|
       t.string :production_name
       t.string :serial_number
-      t.integer :start_time
-      t.integer :ending_time
+      t.string :start_time
+      t.string :ending_time
       t.boolean :forgetting
       t.boolean :problem
       t.references :work, null: false, foreign_key: true
