@@ -3,9 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* ユーザー名 */
+
 .user-name{
   height: 80px;
-  padding: 0 20px;
+  padding: 0 5px;
   background-color: #535353;
   display: flex;
   justify-content: space-between;
@@ -15,6 +16,7 @@
 
 
 /* 右上リンクボタン */
+
 .link-btn {
   position: relative;
   display: inline-block;
@@ -25,8 +27,8 @@
   border-bottom: solid 2px #7a7a7a;
   box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   font-weight: bold;
-  font-size: 20px;
-  margin: 10px 3px;
+  font-size: 15px;
+  margin: 10px;
 }
 
 .link-btn:active {
@@ -40,6 +42,7 @@
 }
 
 
+
 .link-btn-new {
   position: relative;
   display: inline-block;
@@ -50,8 +53,10 @@
   border-bottom: solid 2px #7a7a7a;
   box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   font-weight: bold;
-  font-size: 20px;
-  margin: 10px 15px 10px 0px;
+  font-size: 15px;
+  margin: 10px;
+  
+  
 }
 
 .link-btn-new:active {
@@ -74,8 +79,8 @@
   border-bottom: solid 2px #7a7a7a;
   box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   font-weight: bold;
-  font-size: 20px;
-  margin: 10px 15px 10px 0px;
+  font-size: 15px;
+  margin: 10px 0px;
 }
 
 .link-btn-user:active {
@@ -114,15 +119,21 @@
 }
 
 .list-group-item:hover {
-  background: #a0a0a0;
+  background: #ffc788;
+  color: white;
+  text-decoration: none;
+}
+.list-group-item:focus {
+  background: #ffc788;
   color: white;
   text-decoration: none;
 }
 
 .channel-box{
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   text-align: center;
   height: calc(100vh - 50px - 30px);
+  border-right: 1px solid #d6d6d6;
 }
 
 .channel-list-name{
@@ -200,4 +211,79 @@
 .channel-delete{
   display: block;
   align-content: flex-end;
+}
+
+.list-work{
+  list-style: none;
+  padding:0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .list-work:after {
+    content: "";
+    display: block;
+    width: 400px;
+    height: 0;
+}
+
+.list-work ul{
+  position: relative;
+  font-weight: bold;
+  line-height: 28px;
+  width: 400px;
+  margin: 10px 0px;
+  padding-left: 20px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.4);
+}
+.list-work ul:hover{
+  color:#fff;
+}
+
+.list-work ul:nth-child(4n+1){
+  border:dashed 3px #ff8074;
+  border-left: solid 15px #ff8074;
+}
+.list-work ul:nth-child(4n+1):hover{
+  background: #FFA79F;
+}
+
+.list-work ul:nth-child(4n+2){
+  border:dashed 3px #fbaf5d;
+  border-left: solid 15px #fd9a30;
+}
+.list-work ul:nth-child(4n+2):hover{
+  background: #fbaf5d;
+}
+
+.list-work ul:nth-child(4n+3){
+  border:dashed 3px #9FCDFF;
+  border-left: solid 15px #5dabff;
+}
+.list-work ul:nth-child(4n+3):hover{
+  background: #9FCDFF;
+}
+
+.list-work ul:nth-child(4n+4){
+  border:dashed 3px #AFEBB6;
+  border-left: solid 15px #85fa92;
+}
+.list-work ul:nth-child(4n+4):hover{
+  background: #AFEBB6;
+}
+
+.list-group-date{
+  font-size: 23px;
+}
+
+.list-group-process{
+  font-size: 20px;
 }

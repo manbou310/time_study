@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-    @work = Work.all
+    @work = Work.all.order("created_at DESC")
     @channel = Channel.find(params[:channel_id])
     @works = @channel.works.includes(:user)
   end
@@ -8,7 +8,7 @@ class WorksController < ApplicationController
   def new
     @work = Work.new
     @channel = Channel.find(params[:channel_id])
-    @time_study = @work.time_studies.build
+    @add_form = @work.add_forms.build
   end
   
   def create
@@ -24,8 +24,8 @@ class WorksController < ApplicationController
 
   private
   def work_params
-    params.require(:work).permit(:date, :process_name,
-      time_studies_attributes: [:id, :work_id,:production_name, :serial_number, :start_time, :ending_time, :forgetting, :problem, :_destroy])
+    params.require(:work).permit(
+      :date, :process_name,add_forms_attributes: [:id, :work_id,:production_name, :serial_number, :start_time, :ending_time, :forgetting, :problem, :_destroy])
       .merge(user_id: current_user.id)
   end
 

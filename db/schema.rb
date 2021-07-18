@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_02_051604) do
+ActiveRecord::Schema.define(version: 2021_07_10_071930) do
+
+  create_table "add_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "production_name"
+    t.string "serial_number"
+    t.string "start_time"
+    t.string "ending_time"
+    t.boolean "forgetting"
+    t.boolean "problem"
+    t.bigint "work_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["work_id"], name: "index_add_forms_on_work_id"
+  end
 
   create_table "channel_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -27,19 +40,6 @@ ActiveRecord::Schema.define(version: 2021_07_02_051604) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "time_studies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "production_name"
-    t.string "serial_number"
-    t.integer "start_time"
-    t.integer "ending_time"
-    t.boolean "forgetting"
-    t.boolean "problem"
-    t.bigint "work_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["work_id"], name: "index_time_studies_on_work_id"
-  end
-
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -54,8 +54,8 @@ ActiveRecord::Schema.define(version: 2021_07_02_051604) do
   end
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "date"
-    t.integer "process_name"
+    t.string "date"
+    t.string "process_name"
     t.bigint "user_id", null: false
     t.bigint "channel_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -64,9 +64,9 @@ ActiveRecord::Schema.define(version: 2021_07_02_051604) do
     t.index ["user_id"], name: "index_works_on_user_id"
   end
 
+  add_foreign_key "add_forms", "works"
   add_foreign_key "channel_users", "channels"
   add_foreign_key "channel_users", "users"
-  add_foreign_key "time_studies", "works"
   add_foreign_key "works", "channels"
   add_foreign_key "works", "users"
 end

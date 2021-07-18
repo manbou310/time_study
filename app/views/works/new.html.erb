@@ -2,33 +2,6 @@
 <html lang="ja">
   <head>
 
-    <script type="text/javascript" language="javascript">
-
-
-    function onButtonClickBefore() {
-    let now = new Date();
-    let Hour = now.getHours();
-    let Min = now.getMinutes();
-    let Sec = now.getSeconds();
-    let now_time = Hour + ":" + Min + ":" + Sec;
-
-      document.forms.id_form1.id_textBox1.value = now_time;
-    }
-
-
-    function onButtonClickAfter() {
-    let now = new Date();
-    let Hour = now.getHours();
-    let Min = now.getMinutes();
-    let Sec = now.getSeconds();
-    let now_time = Hour + ":" + Min + ":" + Sec;
-
-      document.forms.id_form2.id_textBox2.value = now_time;
-    }
-
-    </script>
-
-
   </head>
   <body>
    
@@ -51,8 +24,10 @@
         </div>
       </div>
 
+
+
        <div class="add_from">
-          <%= link_to_add_association "フォームを追加", f, :time_studies,
+          <%= link_to_add_association "フォームを追加", f, :add_forms,
             class: "btn btn-outline-secondary mr-3",
             id: 'add-btn',
             data: {
@@ -62,9 +37,11 @@
           %>
       </div>
 
-        <%= f.fields_for :time_studies do |form| %>
-            <%= render "time_study_fields", f: form %>
+        <%= f.fields_for :add_forms do |form| %>
+            <%= render "add_form_fields", f: form %>
         <% end %>
+
+      <div id="detail-association-insertion-point"></div>
 
       <div class="d-flex align-items-center">
         <%= f.submit "保存する" ,class:"btn btn-secondary"%>

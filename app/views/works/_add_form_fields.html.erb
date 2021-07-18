@@ -3,6 +3,31 @@
  <table>
    
     <tr>
+    <script type="text/javascript" language="javascript">
+
+
+    function onButtonClickBefore() {
+    let now = new Date();
+    let Hour = now.getHours();
+    let Min = now.getMinutes();
+    let Sec = now.getSeconds();
+    let now_time = Hour + ":" + Min + ":" + Sec;
+
+      document.forms.id_form1.id_textBox1.value = now_time;
+    }
+
+
+    function onButtonClickAfter() {
+    let now = new Date();
+    let Hour = now.getHours();
+    let Min = now.getMinutes();
+    let Sec = now.getSeconds();
+    let now_time = Hour + ":" + Min + ":" + Sec;
+
+      document.forms.id_form2.id_textBox2.value = now_time;
+    }
+    
+    </script>
       <div class="d-flex justify-content-around my-3 mx-3">
         <div class= col-2.5>
           <%= f.text_field :production_name ,class:"form-control form-control-lg" ,placeholder:"製品名" %>
@@ -13,17 +38,11 @@
         </div>
         
         <div class= col-0.5>
-          <form name="form1" id="id_form1" action="">
-            <%= f.text_field :start_time ,class:"form-control form-control-lg" ,name:"textBox1" ,id:"id_textBox1" ,placeholder:"開始時間" ,value:"" %>
-            <input type="button" value="開始時刻" onclick="onButtonClickBefore();" />
-          </form>
+            <%= f.text_field :start_time ,class:"form-control form-control-lg" ,placeholder:"開始時間" ,value:"" %>
         </div>
 
         <div class= col-0.5>
-          <form name="form2" id="id_form2" action="">
-            <%= f.text_field :ending_time ,class:"form-control form-control-lg" ,name:"textBox2" ,id:"id_textBox2" ,placeholder:"終了時間" ,value:"" %> 
-            <input type="button" value="終了時刻" onclick="onButtonClickAfter();" />
-          </form>
+            <%= f.text_field :ending_time ,class:"form-control form-control-lg",placeholder:"終了時間" ,value:"" %> 
         </div>
 
         <div class= check-box>
@@ -33,7 +52,7 @@
           <%= f.check_box :forgetting ,{}, "true", "false" %>
         </div>
 
-          <!-- 削除ボタン -->
+
           <%= link_to_remove_association "削除", f %>
       </div>
     </tr>
