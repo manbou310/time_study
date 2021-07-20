@@ -22,6 +22,11 @@ class WorksController < ApplicationController
     end
   end
 
+  def show
+    @work = Work.find(params[:id])
+    @add_forms = @work.add_forms.includes(:work)
+  end
+
   private
   def work_params
     params.require(:work).permit(

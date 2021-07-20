@@ -1,74 +1,63 @@
-<!doctype html>
-<html lang="ja">
-  <head>
-  </head>
-  <body>
 
-    <section class= "row">
-      <header class="border-bottom">
-        <div class="d-flex justify-content-between">
-          <div class="col-2 user-name">
-            <div class="text-center col-12">
-            
-             <%= link_to current_user.name, edit_user_path(current_user), class:'link-btn-user col-11 bi bi-person-circle'%>
-            </div>
-          </div>
-          <div class="col-10 bg-secondary">
-              
-              <div class="float-end">
-               <%= link_to ' 新規作成', new_channel_work_path(params[:channel_id]), method: :get ,class:'link-btn-new bi bi-plus-square' %>
-              </div>
-              
-              <div class="float-start ">
-               <%= link_to ' ログアウト', destroy_user_session_path, method: :delete ,class:'link-btn bi bi-person-lines-fill' %>
-              </div>
-
-          </div>
+  <div class="border-bottom">
+    <div class="d-flex justify-content-between">
+      <div class="col-2 user-name">
+        <div class="text-center col-12">
+          <%= link_to current_user.name, edit_user_path(current_user), class:'link-btn-user col-11 bi bi-person-circle'%>
         </div>
-      </header>
-    </section>
-
-    <div class="bottom-content">
-      <div class="channel-box col-2">
-        <div class= "channel-list" >
-          <div class= "channel-item">
-            <div class="channel-list-name">
-              <%= link_to ' チャンネル作成', new_channel_path, method: :get , class:'new-channel bi bi-plus-square-fill me1 col-12' %>
-            </div>
-            <div class="channel-table">
-              <div class="channel-names">
-                <% current_user.channels.each do |channel| %>
-                    <%= link_to channel.channel_name,channel_works_path(channel) , class:'list-group-item col-11', tabindex:'-1' %>
-                <% end %>
-              </div>
-            </div>
+      </div>
+      <div class="col-10 bg-secondary">
+          <div class="float-end">
+            <%= link_to ' 新規作成', new_channel_work_path(params[:channel_id]), method: :get ,class:'link-btn-new bi bi-plus-square' %>
           </div>
-          <div class="channel-delete">
-            <%= link_to "チャンネルを削除", channel_path(@channel), method: :delete, class:'channel-list-delete col-12' %>
+          <div class="float-start ">
+            <%= link_to ' ログアウト', destroy_user_session_path, method: :delete ,class:'link-btn bi bi-person-lines-fill' %>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="bottom-content">
+  <div class="channel-box col-2">
+    <div class= "channel-list" >
+      <div class= "channel-item">
+        <div class="channel-list-name">
+          <%= link_to ' チャンネル作成', new_channel_path, method: :get , class:'new-channel bi bi-plus-square-fill me1 col-12' %>
+        </div>
+        <div class="channel-table">
+          <div class="channel-names">
+            <% current_user.channels.each do |channel| %>
+                <%= link_to channel.channel_name,channel_works_path(channel) , class:'list-group-item col-11', tabindex:'-1' %>
+            <% end %>
           </div>
         </div>
       </div>
-      
+      <div class="channel-delete">
+        <%= link_to "チャンネルを削除", channel_path(@channel), method: :delete, class:'channel-list-delete col-12' %>
+      </div>
+    </div>
+  </div>
+  
 
-      <section class="index-box col-10">
-        <div class="index-box-image cal-12">
-          <%# 日付検索機能 %>
-          <%#= form.datetime_field :sample_at %>
-          <div class = container>
-              <div class="list-work">
-                <% @works.each do |work|%>
-                <%#= link_to 編集ページ, method: :get do %>
-                <ul class="list-group">
+  <section class="index-box col-10">
+    <div class="index-box-image cal-12">
+      <%# 日付検索機能 %>
+      <%#= form.datetime_field :sample_at %>
+      <div class = container>
+          <div class="list-work">
+            <% @works.each do |work|%>
+              <ul class="list-group">
+                <%= link_to work_path(work.id), method: :get , class:'link-list-group' do %>
                   <li class="list-group-date"><%= work.date %></li>
                   <li class="list-group-process"><%= work.process_name %></li>
-                </ul>
                 <% end %>
-                <%# <% end %>
-              </div>
+              </ul>
+            <% end %>
+
           </div>
-        </div>
-      </section>
+      </div>
     </div>
-    <%# <script type="text/javascript" src="javascript/work.js"></script> %>
-  </body>
-</html>
+  </section>
+</div>
+<%# <script type="text/javascript" src="javascript/work.js"></script> %>

@@ -1,0 +1,55 @@
+<div class="works-show">
+  <div class="works-block">
+    <div class="date-works">
+      <div class="box-text"><%='日付'%></div>
+      <div class="box-work"><%= @work.date %></div>
+    </div>
+    <div class="date-works">
+      <div class="box-text"><%='工程名'%></div>
+      <div class="box-work"><%= @work.process_name %></div>
+    </div>
+  </div>
+  <%= link_to '戻る', root_path ,class:'root-link-btn' %>
+</div>
+
+<% @add_forms.each do |add|%>
+<div class="add-forms-show">
+  <div class="add-forms">
+    <div class="box-text"><%='製品名'%></div>
+    <div class="box-add-form"><%= add.production_name %></div>
+  </div>
+
+  <div class="add-forms">
+    <div class="box-text"><%='製造番号'%></div>
+    <div class="box-add-form"><%= add.serial_number %></div>
+  </div>
+
+  <div class="add-forms">
+    <div class="box-text"><%='開始時間'%></div>
+    <div class="box-add-form-time"><%= add.start_time %></div>
+  </div>
+
+  <div class="add-forms">
+    <div class="box-text"><%='終了時間'%></div>
+    <div class="box-add-form-time"><%= add.ending_time %></div>
+  </div>
+
+  <div >
+    <div class="check-box">
+      <div class="box-text">
+        <%='不具合: '%><%= add.problem %>
+      </div>
+      </div>
+      <div class="box-text">
+        <%='記入忘れ: '%><%= add.forgetting %>
+      </div>
+    </div>
+  </div>
+
+</div>
+<% end %>
+
+<div class="link-buttons">
+  <%= link_to '編集', root_path ,class:'link-btn-edit' %>
+  <%= link_to '削除', root_path ,class:'link-btn-destroy' %>
+</div>

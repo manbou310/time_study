@@ -102,6 +102,7 @@
 /* 左下 チャンネルリスト */
 
 
+
 .list-group-item {
   position: relative;
   display: inline-block;
@@ -222,6 +223,15 @@
   align-items: center;
 }
 
+.link-list-group{
+  color: black;
+  text-decoration: none;
+}
+.link-list-group:hover{
+  color:#fff;
+}
+
+
   .list-work:after {
     content: "";
     display: block;
@@ -244,9 +254,9 @@
   background-color: #fff;
   box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.4);
 }
-.list-work ul:hover{
-  color:#fff;
-}
+
+
+
 
 .list-work ul:nth-child(4n+1){
   border:dashed 3px #ff8074;
@@ -282,6 +292,7 @@
 
 .list-group-date{
   font-size: 23px;
+
 }
 
 .list-group-process{
