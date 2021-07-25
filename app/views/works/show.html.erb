@@ -1,16 +1,23 @@
-<div class="works-show">
-  <div class="works-block">
-    <div class="date-works">
-      <div class="box-text"><%='日付'%></div>
-      <div class="box-work"><%= @work.date %></div>
-    </div>
-    <div class="date-works">
-      <div class="box-text"><%='工程名'%></div>
-      <div class="box-work"><%= @work.process_name %></div>
+<div class="row mt-3">
+  <div class="border-bottom pb-3">
+    <div class="d-flex justify-content-around">
+      <div class="date-works col-3">
+        <div class="box-text"><%='日付'%></div>
+        <div class="form-control"><%= @work.date %></div>
+      </div>
+      <div class="date-works col-4">
+        <div class="box-text"><%='工程名'%></div>
+        <div class="form-control"><%= @work.process_name %></div>
+      </div>
+      <div class="text-right">
+       <%= link_to '戻る', channel_works_path(@channel.id) ,class:'link-btn'%>
+      </div>
     </div>
   </div>
-  <%= link_to '戻る', root_path ,class:'root-link-btn' %>
 </div>
+
+
+
 
 <% @add_forms.each do |add|%>
 <div class="add-forms-show">
@@ -37,11 +44,21 @@
   <div >
     <div class="check-box">
       <div class="box-text">
-        <%='不具合: '%><%= add.problem %>
+        <%='不具合: '%>
+        <%if add.problem %>
+         <%='あり'%>
+        <%else%>
+         <%='なし'%>
+        <% end %>
       </div>
       </div>
       <div class="box-text">
-        <%='記入忘れ: '%><%= add.forgetting %>
+        <%='記入忘れ: '%>
+        <%if add.forgetting %>
+         <%='あり'%>
+        <%else%>
+         <%='なし'%>
+        <% end %>
       </div>
     </div>
   </div>
@@ -50,6 +67,6 @@
 <% end %>
 
 <div class="link-buttons">
-  <%= link_to '編集', root_path ,class:'link-btn-edit' %>
-  <%= link_to '削除', root_path ,class:'link-btn-destroy' %>
+  <%= link_to '編集', edit_channel_work_path(@channel,@work) ,class:'link-btn-edit' %>
+  <%= link_to '削除', channel_work_path(@channel,@work), method: :delete ,class:'link-btn-destroy' %>
 </div>

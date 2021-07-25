@@ -1,8 +1,8 @@
 
 <div class="nested-fields">
- <table>
+
    
-    <tr>
+
     <script type="text/javascript" language="javascript">
 
 
@@ -28,33 +28,42 @@
     }
     
     </script>
-      <div class="d-flex justify-content-around my-3 mx-3">
-        <div class= col-2.5>
-          <%= f.text_field :production_name ,class:"form-control form-control-lg" ,placeholder:"製品名" %>
-        </div>
-        
-        <div class= col-2.5>
-          <%= f.text_field :serial_number ,class:"form-control form-control-lg" ,placeholder:"製造番号" %>
-        </div>
-        
-        <div class= col-0.5>
-            <%= f.text_field :start_time ,class:"form-control form-control-lg" ,placeholder:"開始時間" ,value:"" %>
-        </div>
-
-        <div class= col-0.5>
-            <%= f.text_field :ending_time ,class:"form-control form-control-lg",placeholder:"終了時間" ,value:"" %> 
-        </div>
-
-        <div class= check-box>
-          <p class="text-end">不具合：</p>
-          <%= f.check_box :problem ,{}, "true", "false" %>
-          <p class="text-end">忘れ：</p>
-          <%= f.check_box :forgetting ,{}, "true", "false" %>
-        </div>
 
 
-          <%= link_to_remove_association "削除", f %>
+  <div class="add-forms-show">
+      
+    <div class="add-forms">
+      <div class="box-text"><%='製品名'%></div>
+      <%= f.text_field :production_name ,class:"box-add-form" %>
+    </div>
+
+    <div class="add-forms">
+      <div class="box-text"><%='製造番号'%></div>
+      <%= f.text_field :serial_number ,class:"box-add-form" %>
+    </div>
+
+    <div class="add-forms">
+      <div class="box-text"><%='開始時間'%></div>
+      <%= f.text_field :start_time ,class:"box-add-form-time" %>
+    </div>
+
+    <div class="add-forms">
+      <div class="box-text"><%='終了時間'%></div>
+      <%= f.text_field :ending_time ,class:"box-add-form-time"%> 
+    </div>
+    <div >
+      <div class="check-box">
+        <div class="box-text">
+          <%='不具合: '%><%= f.check_box :problem ,{}, "true", "false" %>
+        </div>
+        </div>
+        <div class="box-text">
+          <%='記入忘れ: '%><%= f.check_box :forgetting ,{}, "true", "false" %>
+        </div>
       </div>
-    </tr>
-  </table>
+      <%= link_to_remove_association "削除", f , class:"btn btn-outline-secondary delete-btn"%>
+    </div>
+  </div>
 </div>
+
+

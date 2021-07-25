@@ -1,0 +1,28 @@
+<%= form_with model: [@channel,@work], local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+    <div class="row mt-3">
+      <div class="border-bottom pb-3">
+        <div class="d-flex justify-content-around">
+          <div class="date-works col-3">
+            <div class="box-text"><%='日付'%></div>
+            <%= f.text_field :date ,class: 'form-control' ,placeholder:"日付" %>
+          </div>
+          <div class="date-works col-4">
+            <div class="box-text"><%='工程名'%></div>
+            <%= f.text_field :process_name, class: 'form-control' %>
+          </div>
+          <div class="text-right">
+            <%= link_to '戻る', channel_works_path(@channel.id) ,class:'link-btn'%>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <%= f.fields_for :add_forms do |form| %>
+          <%= render "add_form_fields", f: form %>
+      <% end %>
+      
+  <div class="link-buttons">
+    <%= f.submit "変更する",class:'link-btn-edit' %>
+  </div>
+<% end %>
