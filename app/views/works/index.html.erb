@@ -42,13 +42,12 @@
 
   <section class="index-box col-10">
     <div class="index-box-image cal-12">
-      <%# 日付検索機能 %>
-      <%#= form.datetime_field :sample_at %>
+
       <div class = container>
           <div class="list-work">
             <% @works.each do |work|%>
               <ul class="list-group">
-                <%= link_to work_path(work.id), method: :get , class:'link-list-group' do %>
+                <%= link_to channel_work_path(@channel,work), method: :get , class:'link-list-group' do %>
                   <li class="list-group-date"><%= work.date %></li>
                   <li class="list-group-process"><%= work.process_name %></li>
                 <% end %>
@@ -60,4 +59,3 @@
     </div>
   </section>
 </div>
-<%# <script type="text/javascript" src="javascript/work.js"></script> %>

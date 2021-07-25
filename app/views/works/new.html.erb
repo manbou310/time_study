@@ -4,14 +4,16 @@
     <div class="row mt-3">
       <div class="border-bottom pb-3">
         <div class="d-flex justify-content-around">
-          <div class="col-3">
+          <div class="date-works col-3">
+            <div class="box-text"><%='日付'%></div>
             <%= f.date_field :date ,class: 'form-control' ,placeholder:"日付" %>
           </div>
-          <div class="col-4">
-            <%= f.text_field :process_name, class: 'form-control',placeholder:"工程名" %>
+          <div class="date-works col-4">
+            <div class="box-text"><%='工程名'%></div>
+            <%= f.text_field :process_name, class: 'form-control' %>
           </div>
           <div class="text-right">
-            <%= link_to '戻る', root_path ,class:'link-btn'%>
+            <%= link_to '戻る', channel_works_path(@channel.id) ,class:'link-btn'%>
           </div>
         </div>
       </div>
@@ -27,6 +29,7 @@
           association_insertion_method: 'after'
         }
       %>
+      
     </div>
 
       <%= f.fields_for :add_forms do |form| %>
