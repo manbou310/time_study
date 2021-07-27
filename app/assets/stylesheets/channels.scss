@@ -27,7 +27,7 @@ li {
   font-size: 13px;
 }
 
-.chat-room-form {
+.channel-form {
   width: 980px;
   margin: 60px auto;
   padding: 40px;
@@ -36,54 +36,54 @@ li {
   border-radius: 5px;
   box-sizing: border-box;
 }
-.chat-room-form__errors {
+.channel-form__errors {
   margin: 30px 0;
   padding: 20px 40px;
   border: 1px solid #ddd;
   border-radius: 2px;
   text-align: center;
 }
-.chat-room-form__label {
+.channel-form__label {
   display: block;
   line-height: 50px;
   font-weight: bold;
   text-align: right;
 }
-.chat-room-form__input {
+.channel-form__input {
   float: left;
-  width: 100%;
+  width: 80%;
   line-height: 30px;
   padding: 10px 15px;
   box-sizing: border-box;
 }
-.chat-room-form__action-btn {
+.channel-form__action-btn {
   display: inline-block;
   padding: 12px 20px;
   color: #fff;
   background-color: #38aef0;
   border: 0;
 }
-.chat-room-form__field {
+.channel-form__field {
   margin-top: 30px;
 }
-.chat-room-form__field:after {
+.channel-form__field:after {
   content: "";
   clear: both;
   display: block;
 }
-.chat-room-form__field--left {
+.channel-form__field--left {
   float: left;
   width: 30%;
   padding-right: 20px;
   padding-left: 20px;
   box-sizing: border-box;
 }
-.chat-room-form__field--right {
+.channel-form__field--right {
   float: right;
   width: 70%;
 }
 
-.chat-room-user {
+.channel-user {
   padding: 0 15px;
   line-height: 50px;
   font-size: 14px;
@@ -91,26 +91,26 @@ li {
   width: 500px;
   margin: 0 auto;
 }
-.chat-room-user:after {
+.channel-user:after {
   content: "";
   clear: both;
   display: block;
 }
-.chat-room-user__name {
+.channel-user__name {
   float: left;
 }
-.chat-room-user__btn {
+.channel-user__btn {
   display: inline-block;
   cursor: pointer;
 }
-.chat-room-user__btn--add {
+.channel-user__btn--add {
   color: #38aef0;
 }
-.chat-room-user__btn--remove {
+.channel-user__btn--remove {
   color: #f05050;
 }
 
-.chat-room-user__name a {
+.channel-user__name a {
   text-decoration: none;
   color: #38aef0;
 }
