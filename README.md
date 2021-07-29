@@ -8,13 +8,16 @@
 - https://morning-routine-32490.herokuapp.com/
 # テスト用アカウント
 - ユーザー①  
+name :佐藤
 email : aaa@gmail.com  
 password : a12345  
-- ユーザー②  
-email : 123@gmail.com  
+- ユーザー②
+name :鈴木
+email : bbb@gmail.com  
 password : b12345  
 - 一般ユーザー③  
-email : aaa@gmail.com  
+name :田中
+email : ccc@gmail.com  
 password : c12345
 
 
