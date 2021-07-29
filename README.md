@@ -1,4 +1,24 @@
-# README
+# アプリケーション名
+ Time Study app
+# アプリケーション概要
+前職の業務では作業時間の計測・集計に時間がかかっており、これを解決するアプリ開発を開発した。
+
+
+# URL
+- https://morning-routine-32490.herokuapp.com/
+# テスト用アカウント
+- ユーザー①  
+email : aaa@gmail.com  
+password : a12345  
+- ユーザー②  
+email : 123@gmail.com  
+password : b12345  
+- 一般ユーザー③  
+email : aaa@gmail.com  
+password : c12345
+
+
+
 # テーブル設計
 
 ## users テーブル
