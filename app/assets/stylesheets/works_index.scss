@@ -31,6 +31,7 @@
   margin: 10px;
 }
 
+
 .link-btn:active {
   border-bottom: solid 4px #5f5f5f;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.30);
@@ -113,9 +114,9 @@
   color: #757575;
   background: #d6d6d6;
   transition: .4s;
-  font-size: 18px;
+  font-size: 14px;
   font-family: Century;
-  height: 50px;
+  height: 40px;
   margin: 10px;
   text-align: center;
 }
@@ -141,10 +142,10 @@
 .channel-list-name{
   color: #313131;
   background: #d6d6d6;
-  font-size: 17px;
+  font-size: 14px;
   font-family: Century;
   text-align: left;
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,9 +159,9 @@
   color: #757575;
   background: #d6d6d6;
 
-  font-size: 18px;
+  font-size: 15px;
   font-family: Century;
-  height: 50px;
+  height: 40px;
 
   display: flex;
   justify-content: center;
@@ -196,7 +197,7 @@
   color: #757575;
   background: #d6d6d6;
 
-  font-size: 18px;
+  font-size: 16px;
   font-family: Century;
   height: 50px;
 
@@ -243,10 +244,9 @@
 .list-work ul{
   position: relative;
   font-weight: bold;
-  line-height: 28px;
-  width: 400px;
-  margin: 10px 0px;
-  padding-left: 20px;
+  line-height: 20px;
+  margin: 10px;
+  padding-left: 15px;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
@@ -292,10 +292,10 @@
 }
 
 .list-group-date{
-  font-size: 23px;
+  font-size: 20px;
 
 }
 
 .list-group-process{
-  font-size: 20px;
+  font-size: 16px;
 }
