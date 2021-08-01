@@ -237,11 +237,12 @@
   .list-work:after {
     content: "";
     display: block;
-    width: 400px;
+    width: 320px;
     height: 0;
 }
 
 .list-work ul{
+  width: 300px;
   position: relative;
   font-weight: bold;
   line-height: 20px;
