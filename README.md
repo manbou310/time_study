@@ -24,23 +24,20 @@ password : c12345
 
 # 実装した機能
   - 実装機能
-    - ユーザー管理機能
+    - ユーザー管理機能  
       (https://gyazo.com/188a0303956d30da7660988ea4689040)
 
-    - チャンネル機能
+    - チャンネル機能  
       情報を共有したいユーザーを選ぶ
       https://gyazo.com/7fac985aecf12845736628a8b61ac8a3
 
-    - 作業時間の実績投稿機能
+    - 作業時間の実績投稿機能  
       (https://gyazo.com/3f80836ce1a0566f3b553d87603c59c0)
       (https://gyazo.com/38fa700db0a1e5f929fb5f2bde514cfb)
 
-    - 実績投稿編集機能
+    - 実績投稿編集機能  
       投稿した内容を修正できる
       (https://gyazo.com/9b5567f39766049b0f91351a1ded163e)
-      
-    - 検索結果〜グラフ表示〜コメント機能
-      ![マーケット情報検索結果~グラフ~コメント](https://user-images.githubusercontent.com/74547623/104898858-7ade1d80-59bd-11eb-8709-00dc1311ddd3.gif)
 
 # 工夫したポイント
   - チャンネル機能実装により他の人にも情報を共有できる
@@ -122,8 +119,8 @@ password : c12345
 | -------------------- | ---------- | ------------------------------ |
 | production_name      | string     |                                |
 | serial_number        | string     |                                |
-| start_time           | integer    | null: false                    |
-| ending_time          | integer    | null: false                    |
+| start_time           | string     | null: false                    |
+| ending_time          | string     | null: false                    |
 | problem              | boolean    |                                |
 | forgetting           | boolean    |                                |for
 
@@ -132,3 +129,11 @@ password : c12345
 
 ### Association
 - belongs_to :works
+
+
+# 開発環境
+- フロントエンド：HTML5/CSS(Bootstrap)/JavaScript/jQuery/
+- バックエンド：Ruby on Rails(6.0.0)/Ruby(2.6.5)/
+- データベース：MySQL(5.6.50)/Sequel Pro
+- インフラ：Heroku
+- タスク管理：GitHub
