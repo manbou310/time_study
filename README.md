@@ -25,19 +25,19 @@ password : c12345
 # 実装した機能
   - 実装機能
     - ユーザー管理機能  
-      ![動画](https://user-images.githubusercontent.com/84434040/127807027-23e1959b-6b58-4ecc-bb44-ffbd0325829b.mp4)
+      ![ログイン](https://user-images.githubusercontent.com/84434040/127809042-107a3414-a9ce-4512-80d9-0f805b0e5653.gif)
 
     - チャンネル機能  
       情報を共有したいユーザーを選ぶ  
-      ![動画](https://user-images.githubusercontent.com/84434040/127807094-640aaeb0-3767-46bd-ab01-3f003e272ffa.mp4)
+      ![チャンネル作成](https://user-images.githubusercontent.com/84434040/127809867-59171b14-ba7a-4a51-b909-034b001d1517.gif)
 
     - 作業時間の実績投稿機能  
-      ![動画](https://user-images.githubusercontent.com/84434040/127807147-85c08dd2-627a-4faf-a0c9-a63e79c4e614.mp4)  
-      ![動画](https://user-images.githubusercontent.com/84434040/127807224-524060b8-9b75-4f37-af4b-1d2c432327ad.mp4)  
+      ![フォーム追加](https://user-images.githubusercontent.com/84434040/127809881-089bf9d1-1b09-435a-8be6-d511447807ce.gif)  
+      ![新規投稿](https://user-images.githubusercontent.com/84434040/127809933-436ea451-fdac-407a-8b2c-a6b695904741.gif)  
 
     - 実績投稿編集機能  
       投稿した内容の修正機能
-      ![動画](https://user-images.githubusercontent.com/84434040/127807243-7bd5fcc2-59bf-4a1a-a2d0-9225d6e1ac19.mp4)
+      ![編集機能](https://user-images.githubusercontent.com/84434040/127809953-eb341c2c-46ad-4cf2-8051-01ee91cae3a5.gif)
 
 # 工夫したポイント
   - チャンネル機能実装により他の人にも情報を共有できる
