@@ -25,19 +25,19 @@ password : c12345
 # 実装した機能
   - 実装機能
     - ユーザー管理機能  
-      https://user-images.githubusercontent.com/84434040/127807027-23e1959b-6b58-4ecc-bb44-ffbd0325829b.mp4
+      ![動画](https://user-images.githubusercontent.com/84434040/127807027-23e1959b-6b58-4ecc-bb44-ffbd0325829b.mp4)
 
     - チャンネル機能  
       情報を共有したいユーザーを選ぶ  
-      https://user-images.githubusercontent.com/84434040/127807094-640aaeb0-3767-46bd-ab01-3f003e272ffa.mp4
+      ![動画](https://user-images.githubusercontent.com/84434040/127807094-640aaeb0-3767-46bd-ab01-3f003e272ffa.mp4)
 
     - 作業時間の実績投稿機能  
-      https://user-images.githubusercontent.com/84434040/127807147-85c08dd2-627a-4faf-a0c9-a63e79c4e614.mp4  
-      https://user-images.githubusercontent.com/84434040/127807224-524060b8-9b75-4f37-af4b-1d2c432327ad.mp4  
+      ![動画](https://user-images.githubusercontent.com/84434040/127807147-85c08dd2-627a-4faf-a0c9-a63e79c4e614.mp4)  
+      ![動画](https://user-images.githubusercontent.com/84434040/127807224-524060b8-9b75-4f37-af4b-1d2c432327ad.mp4)  
 
     - 実績投稿編集機能  
       投稿した内容の修正機能
-      https://user-images.githubusercontent.com/84434040/127807243-7bd5fcc2-59bf-4a1a-a2d0-9225d6e1ac19.mp4
+      ![動画](https://user-images.githubusercontent.com/84434040/127807243-7bd5fcc2-59bf-4a1a-a2d0-9225d6e1ac19.mp4)
 
 # 工夫したポイント
   - チャンネル機能実装により他の人にも情報を共有できる
@@ -53,7 +53,7 @@ password : c12345
 # テーブル設計
 
 ## ER図
-https://user-images.githubusercontent.com/84434040/127803542-845737f4-76a9-4f7f-8db1-e4860943eefd.jpeg
+![データベース ER 図](https://user-images.githubusercontent.com/84434040/127803542-845737f4-76a9-4f7f-8db1-e4860943eefd.jpeg)
 
 
 
