@@ -14,8 +14,27 @@
   margin: 0px 30px;
 }
 
+.box-text-parent{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
 .box-text{
   font-size:16px;
+}
+
+.necessary{
+  margin-left: 5px;
+  padding: 2px 6px;
+  background-color: rgb(206, 62, 62);
+  color: #fff;
+  font-weight: bold;
+  font-size: 8px;
+  text-align: center;
+
+  border-radius: 3px;
 }
 
 .box-work {
