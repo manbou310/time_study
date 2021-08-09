@@ -51,36 +51,59 @@ li {
 }
 .channel-form__input {
   float: left;
-  width: 80%;
+  width: 56%;
   line-height: 30px;
   padding: 10px 15px;
   box-sizing: border-box;
 }
-.channel-form__action-btn {
-  display: inline-block;
-  padding: 12px 20px;
-  color: #fff;
-  background-color: #38aef0;
-  border: 0;
+
+
+.channel-form-btn {
+  width: 200px;
+  position: relative;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #FFF;
+  background: #b6b6b6;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px;
+
 }
-.channel-form__field {
+
+.channel-form-btn:hover{
+  color:rgb(255, 255, 255);
+  background: #cc3535;
+}
+
+
+
+
+.channel-form-box {
   margin-top: 30px;
 }
-.channel-form__field:after {
+.channel-form-box:after {
   content: "";
   clear: both;
   display: block;
 }
-.channel-form__field--left {
+.channel-form-left {
   float: left;
-  width: 30%;
+  display: flex;
+  justify-content: flex-end;
   padding-right: 20px;
-  padding-left: 20px;
+  width: 30%;
   box-sizing: border-box;
+  align-items: center;
 }
-.channel-form__field--right {
+.channel-form-right {
   float: right;
   width: 70%;
+}
+
+.channel-btn{
+  display: flex;
+  justify-content: center;
 }
 
 .channel-user {

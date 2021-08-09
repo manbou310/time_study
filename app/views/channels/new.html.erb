@@ -1,21 +1,23 @@
 <div class='channel-form'>
   <h1>新規チャンネル</h1>
   <%=form_with model: @channel, local: true do |f|%>
-    <div class='channel-form__field'>
-      <div class='channel-form__field--left'>
-        <%= f.label :チャンネル名, class: 'channel-form__label'%>
+  <%= render 'shared/error_messages', model: f.object %>
+    <div class='channel-form-box'>
+      <div class='channel-form-left'>
+          <%= f.label :チャンネル名, class: 'channel-form__label'%>
+          <div class="necessary"><%='必須'%></div>
       </div>
-      <div class='channel-form__field--right'>
+      <div class='channel-form-box--right'>
         <%= f.text_field :channel_name, class: 'chat__room_name channel-form__input', placeholder: 'チャンネル名を入力してください'%>
       </div>
     </div>
-    <div class='channel-form__field'>
+    <div class='channel-form-box'>
     </div>
-    <div class='channel-form__field'>
-      <div class='channel-form__field--left'>
+    <div class='channel-form-box'>
+      <div class='channel-form-left'>
         <label class='channel-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
       </div>
-      <div class='channel-form__field--right'>
+      <div class='channel-form-right'>
         <select name="channel[user_ids][]">
           <option value="">ユーザーを選択してください</option>
           <% User.where.not(id: current_user.id).each do |user| %>
@@ -25,10 +27,10 @@
         <input name="channel[user_ids][]" type="hidden" value=<%= current_user.id%>>
       </div>
     </div>
-    <div class='channel-form__field'>
-      <div class='channel-form__field--left'></div>
-      <div class='channel-form__field--right'>
-        <%= f.submit class: 'channel-form__action-btn'%>
+    <div class='channel-form-box'>
+      <div class='channel-btn'>
+          <%= link_to '戻る', root_path ,class:'link-btn'%>
+          <%= f.submit "チャンネル作成" ,class:'channel-form-btn'%>
       </div>
     </div>
   <% end %>

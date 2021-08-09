@@ -1,5 +1,4 @@
 class Work < ApplicationRecord
-
   belongs_to :user
   belongs_to :channel
   has_many :add_forms, dependent: :destroy
@@ -9,5 +8,4 @@ class Work < ApplicationRecord
     validates :date
     validates :process_name
   end
-
 end
