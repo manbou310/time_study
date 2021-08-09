@@ -56,3 +56,6 @@ gem 'pry-rails'
 gem 'devise'
 gem 'cocoon'
 gem "aws-sdk-s3", require: false
+gem 'rspec-rails'
+gem 'factory_bot_rails'
+gem 'faker'
