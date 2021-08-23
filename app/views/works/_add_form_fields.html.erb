@@ -48,7 +48,7 @@
         <div class="box-text"><%='開始時間'%></div>
         <div class="necessary"><%='必須'%></div>
       </div>
-      <%= f.text_field :start_time ,class:"box-add-form-time col-12" %>
+      <%= f.text_field :start_time ,class:"box-add-form-time col-12" ,type:"time"%>
     </div>
 
     <div class="add-forms">
@@ -56,7 +56,7 @@
         <div class="box-text"><%='終了時間'%></div>
         <div class="necessary"><%='必須'%></div>
       </div>
-      <%= f.text_field :ending_time ,class:"box-add-form-time col-12"%> 
+      <%= f.text_field :ending_time ,class:"box-add-form-time col-12", type:"time"%> 
     </div>
     <div >
       <div class="check-box">
